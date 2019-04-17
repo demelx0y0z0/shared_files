@@ -62,13 +62,11 @@ export default class IssueFilter extends React.Component
 // ========================================================================================
 
  applyFilter() {
-  console.log("applyFilter Start: ",(new Date()).getTime());
    const newFilter = {};
    if (this.state.status) newFilter.status = this.state.status;
    if (this.state.effort_gte) newFilter.effort_gte = this.state.effort_gte; 
    if (this.state.effort_lte) newFilter.effort_lte = this.state.effort_lte;
    this.props.setFilter(newFilter);
-   console.log("applyFilter End: ",(new Date()).getTime());
  }
 
  clearFilter() {
@@ -76,7 +74,6 @@ export default class IssueFilter extends React.Component
  }
 
  render() {
-  console.log("render Method IssueFilter.jsx: ",(new Date()).getTime());  
    return (    
       <>
         Status:      
